@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Umanit\SyliusProductVariantAttributePlugin\Form\Type;
+namespace Doop\SyliusProductVariantAttributePlugin\Form\Type;
 
 use Sylius\Bundle\AttributeBundle\Form\Type\AttributeType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -24,6 +24,6 @@ final class ProductVariantAttributeType extends AttributeType
 
     public function getBlockPrefix(): string
     {
-        return 'umanit_product_variant_attribute';
+        return 'doop_product_variant_attribute';
     }
 }

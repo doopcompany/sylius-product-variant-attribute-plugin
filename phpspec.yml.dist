@@ -1,4 +1,4 @@
 suites:
     main:
-        namespace: Umanit\SyliusProductVariantAttributePlugin
-        psr4_prefix: Umanit\SyliusProductVariantAttributePlugin
+        namespace: Doop\SyliusProductVariantAttributePlugin
+        psr4_prefix: Doop\SyliusProductVariantAttributePlugin

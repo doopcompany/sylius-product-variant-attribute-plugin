@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tests\Umanit\SyliusProductVariantAttributePlugin\Entity\Product;
+namespace Tests\Doop\SyliusProductVariantAttributePlugin\Entity\Product;
 
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Core\Model\ProductVariant as BaseProductVariant;
 use Sylius\Component\Product\Model\ProductVariantTranslation;
 use Sylius\Component\Product\Model\ProductVariantTranslationInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantTrait;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantInterface;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantTrait;
 
 /**
  * @ORM\Entity

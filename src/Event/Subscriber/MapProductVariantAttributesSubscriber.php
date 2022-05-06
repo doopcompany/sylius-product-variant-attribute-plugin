@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Umanit\SyliusProductVariantAttributePlugin\Event\Subscriber;
+namespace Doop\SyliusProductVariantAttributePlugin\Event\Subscriber;
 
 use Doctrine\Common\EventSubscriber;
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Events;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValue;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValue;
 
 class MapProductVariantAttributesSubscriber implements EventSubscriber
 {

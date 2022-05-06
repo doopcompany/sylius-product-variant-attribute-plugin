@@ -19,4 +19,4 @@ sylius_product:
     resources:
         product_variant:
             classes:
-                model: Tests\Umanit\SyliusProductVariantAttributePlugin\Entity\Product\ProductVariant
+                model: Tests\Doop\SyliusProductVariantAttributePlugin\Entity\Product\ProductVariant

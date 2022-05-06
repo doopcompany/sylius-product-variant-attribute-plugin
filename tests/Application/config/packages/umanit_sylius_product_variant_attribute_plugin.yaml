@@ -1,2 +1,2 @@
 imports:
-    - { resource: '@UmanitSyliusProductVariantAttributePlugin/Resources/config/config.yaml' }
+    - { resource: '@DoopSyliusProductVariantAttributePlugin/Resources/config/config.yaml' }

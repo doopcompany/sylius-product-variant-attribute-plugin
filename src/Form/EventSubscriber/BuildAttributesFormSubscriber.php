@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Umanit\SyliusProductVariantAttributePlugin\Form\EventSubscriber;
+namespace Doop\SyliusProductVariantAttributePlugin\Form\EventSubscriber;
 
 use Sylius\Component\Attribute\Model\AttributeValueInterface;
 use Sylius\Component\Product\Model\ProductAttributeInterface;
@@ -12,9 +12,9 @@ use Sylius\Component\Resource\Translation\Provider\TranslationLocaleProviderInte
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValueInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantInterface;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeInterface;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValueInterface;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantInterface;
 use Webmozart\Assert\Assert;
 
 final class BuildAttributesFormSubscriber implements EventSubscriberInterface

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Umanit\SyliusProductVariantAttributePlugin\Form\Type;
+namespace Doop\SyliusProductVariantAttributePlugin\Form\Type;
 
 use Sylius\Bundle\AttributeBundle\Form\Type\AttributeTranslationType;
 
@@ -10,6 +10,6 @@ final class ProductVariantAttributeTranslationType extends AttributeTranslationT
 {
     public function getBlockPrefix(): string
     {
-        return 'umanit_product_variant_attribute_translation';
+        return 'doop_product_variant_attribute_translation';
     }
 }

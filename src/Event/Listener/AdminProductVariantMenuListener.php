@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Umanit\SyliusProductVariantAttributePlugin\Event\Listener;
+namespace Doop\SyliusProductVariantAttributePlugin\Event\Listener;
 
 use Knp\Menu\ItemInterface;
 use Knp\Menu\MenuItem;
@@ -38,7 +38,7 @@ class AdminProductVariantMenuListener
         );
 
         $attributes
-            ->setLabel('umanit_sylius_product_variant_attribute_plugin.menu.admin.main.catalog.variant_attributes')
+            ->setLabel('doop_sylius_product_variant_attribute_plugin.menu.admin.main.catalog.variant_attributes')
             ->setLabelAttribute('icon', 'cubes')
         ;
 
@@ -58,7 +58,7 @@ class AdminProductVariantMenuListener
         $attributes
             ->setAttribute(
                 'template',
-                '@UmanitSyliusProductVariantAttributePlugin/Admin/ProductVariant/Tab/_attributes.html.twig'
+                '@DoopSyliusProductVariantAttributePlugin/Admin/ProductVariant/Tab/_attributes.html.twig'
             )
             ->setLabel('sylius.ui.attributes')
         ;
@@ -74,6 +74,6 @@ class AdminProductVariantMenuListener
             return;
         }
 
-        $attributes->setLabel('umanit_sylius_product_variant_attribute_plugin.menu.admin.main.catalog.product_attributes');
+        $attributes->setLabel('doop_sylius_product_variant_attribute_plugin.menu.admin.main.catalog.product_attributes');
     }
 }

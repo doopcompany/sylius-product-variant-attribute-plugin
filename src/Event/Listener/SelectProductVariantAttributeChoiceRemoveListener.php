@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Umanit\SyliusProductVariantAttributePlugin\Event\Listener;
+namespace Doop\SyliusProductVariantAttributePlugin\Event\Listener;
 
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\Persistence\ObjectManager;
 use Sylius\Component\Attribute\AttributeType\SelectAttributeType;
 use Sylius\Component\Product\Model\ProductAttributeInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValueInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Repository\ProductVariantAttributeValueRepositoryInterface;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValueInterface;
+use Doop\SyliusProductVariantAttributePlugin\Repository\ProductVariantAttributeValueRepositoryInterface;
 
 final class SelectProductVariantAttributeChoiceRemoveListener
 {

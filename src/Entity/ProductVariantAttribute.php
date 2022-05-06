@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Umanit\SyliusProductVariantAttributePlugin\Entity;
+namespace Doop\SyliusProductVariantAttributePlugin\Entity;
 
 use Sylius\Component\Attribute\Model\Attribute as BaseAttribute;
 use Sylius\Component\Attribute\Model\AttributeTranslationInterface;

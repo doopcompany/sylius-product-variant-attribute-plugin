@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Tests\Umanit\SyliusProductVariantAttributePlugin\Application\Kernel;
+use Tests\Doop\SyliusProductVariantAttributePlugin\Application\Kernel;
 use Symfony\Component\ErrorHandler\Debug;
 use Symfony\Component\HttpFoundation\Request;
 

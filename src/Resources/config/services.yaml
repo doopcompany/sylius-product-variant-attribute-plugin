@@ -1,76 +1,76 @@
 parameters:
-    umanit_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute.validation_groups:
+    doop_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute.validation_groups:
         - sylius
-    umanit_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_value.validation_groups:
+    doop_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_value.validation_groups:
         - sylius
-    umanit_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_translation.validation_groups:
+    doop_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_translation.validation_groups:
         - sylius
 
 services:
-    umanit_sylius_product_variant_attribute_plugin.event.listener.admin_product_variant_menu:
-        class: Umanit\SyliusProductVariantAttributePlugin\Event\Listener\AdminProductVariantMenuListener
+    doop_sylius_product_variant_attribute_plugin.event.listener.admin_product_variant_menu:
+        class: Doop\SyliusProductVariantAttributePlugin\Event\Listener\AdminProductVariantMenuListener
         arguments:
             - '@knp_menu.manipulator'
-            - '%umanit_sylius_product_variant_attribute_plugin.rename_product_attribute_menu_entry%'
+            - '%doop_sylius_product_variant_attribute_plugin.rename_product_attribute_menu_entry%'
         tags:
             - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAttributesMainMenu }
             - { name: kernel.event_listener, event: sylius.menu.admin.product_variant.form, method: addAttributesFormMenu }
 
-    umanit_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_type:
-        class: Umanit\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeType
+    doop_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_type:
+        class: Doop\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeType
         arguments:
             - '%sylius.model.product_variant_attribute.class%'
-            - '%umanit_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute.validation_groups%'
-            - 'Umanit\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeTranslationType'
+            - '%doop_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute.validation_groups%'
+            - 'Doop\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeTranslationType'
             - '@sylius.form_registry.attribute_type'
         tags:
             - { name: form.type }
 
-    umanit_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_value_type:
-        class: Umanit\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeValueType
+    doop_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_value_type:
+        class: Doop\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeValueType
         arguments:
             - '%sylius.model.product_variant_attribute_value.class%'
-            - '%umanit_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_value.validation_groups%'
-            - 'Umanit\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeChoiceType'
+            - '%doop_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_value.validation_groups%'
+            - 'Doop\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeChoiceType'
             - '@sylius.repository.product_variant_attribute'
             - '@sylius.repository.locale'
             - '@sylius.form_registry.attribute_type'
         tags:
             - { name: form.type }
 
-    umanit_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_translation_type:
-        class: Umanit\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeTranslationType
+    doop_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_translation_type:
+        class: Doop\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeTranslationType
         arguments:
             - '%sylius.model.product_variant_attribute_translation.class%'
-            - '%umanit_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_translation.validation_groups%'
+            - '%doop_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_translation.validation_groups%'
             - '@sylius.form_registry.attribute_type'
         tags:
             - { name: form.type }
 
-    umanit_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_choice_type:
-        class: Umanit\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeChoiceType
+    doop_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_choice_type:
+        class: Doop\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeChoiceType
         arguments:
             - '@sylius.repository.product_variant_attribute'
         tags:
             - { name: form.type }
 
-    umanit_sylius_product_variant_attribute_plugin.form.extension.type.product_variant:
-        class: Umanit\SyliusProductVariantAttributePlugin\Form\Extension\ProductVariantTypeExtension
+    doop_sylius_product_variant_attribute_plugin.form.extension.type.product_variant:
+        class: Doop\SyliusProductVariantAttributePlugin\Form\Extension\ProductVariantTypeExtension
         arguments:
             - '@sylius.factory.product_variant_attribute_value'
             - '@sylius.translation_locale_provider'
         tags:
             - { name: form.type_extension }
 
-    umanit_sylius_product_variant_attribute_plugin.doctrine.event_subscriber.map_product_variant_attributes:
-        class: Umanit\SyliusProductVariantAttributePlugin\Event\Subscriber\MapProductVariantAttributesSubscriber
+    doop_sylius_product_variant_attribute_plugin.doctrine.event_subscriber.map_product_variant_attributes:
+        class: Doop\SyliusProductVariantAttributePlugin\Event\Subscriber\MapProductVariantAttributesSubscriber
         arguments:
-            - '%umanit_sylius_product_variant_attribute_plugin.product_variant_model%'
+            - '%doop_sylius_product_variant_attribute_plugin.product_variant_model%'
         tags:
             - { name: doctrine.event_subscriber }
 
-    umanit_sylius_product_variant_attribute_plugin.listener.select_product_variant_attribute_choice_remove:
-        class: Umanit\SyliusProductVariantAttributePlugin\Event\Listener\SelectProductVariantAttributeChoiceRemoveListener
+    doop_sylius_product_variant_attribute_plugin.listener.select_product_variant_attribute_choice_remove:
+        class: Doop\SyliusProductVariantAttributePlugin\Event\Listener\SelectProductVariantAttributeChoiceRemoveListener
         arguments:
             - '%sylius.model.product_variant_attribute_value.class%'
         tags:

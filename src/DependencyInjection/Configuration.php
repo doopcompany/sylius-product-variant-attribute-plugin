@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Umanit\SyliusProductVariantAttributePlugin\DependencyInjection;
+namespace Doop\SyliusProductVariantAttributePlugin\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -11,7 +11,7 @@ final class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('umanit_sylius_product_variant_attribute_plugin');
+        $treeBuilder = new TreeBuilder('doop_sylius_product_variant_attribute_plugin');
 
         $treeBuilder->getRootNode()
             ->children()

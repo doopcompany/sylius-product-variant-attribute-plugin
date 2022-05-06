@@ -4,8 +4,6 @@
     </a>
 </p>
 
-# UmanIT
-
 ## Sylius Product Variant Attribute Plugin
 
 Add attributes on your products variants.
@@ -14,7 +12,7 @@ Add attributes on your products variants.
 
 Install the plugin with composer
 
-`$ composer require umanit/sylius-product-variant-attribute-plugin`
+`$ composer require doop/sylius-product-variant-attribute-plugin`
 
 Register the plugin to your `config/bundles.php`
 
@@ -23,22 +21,22 @@ Register the plugin to your `config/bundles.php`
 
 return [
     // ...
-    Umanit\SyliusProductVariantAttributePlugin\UmanitSyliusProductVariantAttributePlugin::class => ['all' => true],
+    Doop\SyliusProductVariantAttributePlugin\DoopSyliusProductVariantAttributePlugin::class => ['all' => true],
 ];
 ```
 
-Import the configuration file, for example in `config/packages/umanit_sylius_product_variant_attribute_plugin.yaml`
+Import the configuration file, for example in `config/packages/doop_sylius_product_variant_attribute_plugin.yaml`
 
 ```yaml
 imports:
-    - { resource: '@UmanitSyliusProductVariantAttributePlugin/Resources/config/config.yaml' }
+    - { resource: '@DoopSyliusProductVariantAttributePlugin/Resources/config/config.yaml' }
 ```
 
 Import the routing file, for example in `config/routes/sylius_admin.yaml`
 
 ```yaml
-umanit_sylius_product_variant_attribute_plugin:
-    resource: '@UmanitSyliusProductVariantAttributePlugin/Resources/config/admin_routing.yaml'
+doop_sylius_product_variant_attribute_plugin:
+    resource: '@DoopSyliusProductVariantAttributePlugin/Resources/config/admin_routing.yaml'
     prefix: /admin
 ```
 
@@ -54,8 +52,8 @@ namespace App\Entity\Product;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Core\Model\ProductVariant as BaseProductVariant;
 use Sylius\Component\Product\Model\ProductVariantTranslationInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantTrait;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantInterface;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantTrait;
 
 /**
  * @ORM\Entity
@@ -100,6 +98,6 @@ By default, the existing entry `Attributes` is renamed to `Products attributes`.
 defining the following configuration:
 
 ```yaml
-umanit_sylius_product_variant_attribute_plugin:
+doop_sylius_product_variant_attribute_plugin:
     rename_product_attribute_menu_entry: false
 ```

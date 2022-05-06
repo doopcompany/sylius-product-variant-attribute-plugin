@@ -2,6 +2,6 @@ sylius_admin:
     resource: "@SyliusAdminBundle/Resources/config/routing.yml"
     prefix: /admin
 
-umanit_sylius_product_variant_attribute_plugin:
-    resource: "@UmanitSyliusProductVariantAttributePlugin/Resources/config/admin_routing.yaml"
+doop_sylius_product_variant_attribute_plugin:
+    resource: "@DoopSyliusProductVariantAttributePlugin/Resources/config/admin_routing.yaml"
     prefix: /admin

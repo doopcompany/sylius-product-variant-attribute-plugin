@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Umanit\SyliusProductVariantAttributePlugin\Controller;
+namespace Doop\SyliusProductVariantAttributePlugin\Controller;
 
 use Sylius\Bundle\ProductBundle\Controller\ProductAttributeController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
-use Umanit\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeChoiceType;
+use Doop\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeChoiceType;
 
 class ProductVariantAttributeController extends ProductAttributeController
 {

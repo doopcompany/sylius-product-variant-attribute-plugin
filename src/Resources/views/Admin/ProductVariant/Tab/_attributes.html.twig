@@ -1,10 +1,10 @@
-{% form_theme form '@UmanitSyliusProductVariantAttributePlugin/Admin/ProductVariant/Attribute/attributesCollection.html.twig' %}
+{% form_theme form '@DoopSyliusProductVariantAttributePlugin/Admin/ProductVariant/Attribute/attributesCollection.html.twig' %}
 
 <div class="ui tab" data-tab="attributes">
     <h3 class="ui top attached header">{{ 'sylius.ui.attributes'|trans }}</h3>
 
     <div class="ui attached segment">
-        {{ render(url('umanit_sylius_product_variant_attribute_plugin_admin_get_product_variant_attributes')) }}
+        {{ render(url('doop_sylius_product_variant_attribute_plugin_admin_get_product_variant_attributes')) }}
         <div id="attributesContainer" data-count="{{ form.attributes|length }}">
             {{ form_widget(form.attributes, {'attr': {'translations': form.translations} }) }}
         </div>

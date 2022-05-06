@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace spec\Umanit\SyliusProductVariantAttributePlugin\Event\Listener;
+namespace spec\Doop\SyliusProductVariantAttributePlugin\Event\Listener;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Event\LifecycleEventArgs;
@@ -13,8 +13,8 @@ use PhpSpec\ObjectBehavior;
 use Sylius\Component\Attribute\AttributeType\SelectAttributeType;
 use Sylius\Component\Product\Model\ProductAttributeInterface;
 use Sylius\Component\Product\Repository\ProductAttributeValueRepositoryInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValue;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValueInterface;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValue;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValueInterface;
 
 final class SelectProductVariantAttributeChoiceRemoveListenerSpec extends ObjectBehavior
 {

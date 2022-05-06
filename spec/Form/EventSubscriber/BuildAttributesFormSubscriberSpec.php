@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace spec\Umanit\SyliusProductVariantAttributePlugin\Form\EventSubscriber;
+namespace spec\Doop\SyliusProductVariantAttributePlugin\Form\EventSubscriber;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use PhpSpec\ObjectBehavior;
@@ -10,9 +10,9 @@ use Sylius\Component\Resource\Factory\FactoryInterface;
 use Sylius\Component\Resource\Translation\Provider\TranslationLocaleProviderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValueInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantInterface;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeInterface;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValueInterface;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantInterface;
 
 final class BuildAttributesFormSubscriberSpec extends ObjectBehavior
 {

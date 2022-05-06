@@ -2,26 +2,26 @@
 
 declare(strict_types=1);
 
-namespace Umanit\SyliusProductVariantAttributePlugin\DependencyInjection;
+namespace Doop\SyliusProductVariantAttributePlugin\DependencyInjection;
 
 use Sylius\Bundle\ResourceBundle\DependencyInjection\Extension\AbstractResourceExtension;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
-use Umanit\SyliusProductVariantAttributePlugin\Controller\ProductVariantAttributeController;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttribute;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeTranslation;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeTranslationInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValue;
-use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValueInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeTranslationType;
-use Umanit\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeType;
-use Umanit\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeValueType;
-use Umanit\SyliusProductVariantAttributePlugin\Repository\ProductVariantAttributeValueRepository;
+use Doop\SyliusProductVariantAttributePlugin\Controller\ProductVariantAttributeController;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttribute;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeInterface;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeTranslation;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeTranslationInterface;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValue;
+use Doop\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValueInterface;
+use Doop\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeTranslationType;
+use Doop\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeType;
+use Doop\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeValueType;
+use Doop\SyliusProductVariantAttributePlugin\Repository\ProductVariantAttributeValueRepository;
 
-final class UmanitSyliusProductVariantAttributeExtension extends AbstractResourceExtension implements PrependExtensionInterface
+final class DoopSyliusProductVariantAttributeExtension extends AbstractResourceExtension implements PrependExtensionInterface
 {
     public function load(array $configs, ContainerBuilder $container): void
     {
@@ -31,11 +31,11 @@ final class UmanitSyliusProductVariantAttributeExtension extends AbstractResourc
         $loader->load('services.yaml');
 
         $container->setParameter(
-            'umanit_sylius_product_variant_attribute_plugin.rename_product_attribute_menu_entry',
+            'doop_sylius_product_variant_attribute_plugin.rename_product_attribute_menu_entry',
             $config['rename_product_attribute_menu_entry']
         );
         $container->setParameter(
-            'umanit_sylius_product_variant_attribute_plugin.product_variant_model',
+            'doop_sylius_product_variant_attribute_plugin.product_variant_model',
             $config['product_variant_model']
         );
     }

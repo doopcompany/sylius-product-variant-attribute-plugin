@@ -1,12 +1,12 @@
 {
-    "name": "umanit/sylius-product-variant-attribute-plugin",
+    "name": "doopcompany/sylius-product-variant-attribute-plugin",
     "type": "sylius-plugin",
     "keywords": ["sylius", "sylius-plugin"],
     "description": "Plugin for Sylius to add attributes on product variants.",
     "license": "MIT",
     "require": {
-        "php": "^7.4 || ^8.0",
-        "sylius/sylius": "^1.9.0 || ^1.10.0"
+        "php": "^8.0",
+        "sylius/sylius": "^1.10 || ^1.11"
     },
     "require-dev": {
         "behat/behat": "^3.6.1",
@@ -48,9 +48,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Umanit\\SyliusProductVariantAttributePlugin\\": "src/",
-            "Tests\\Umanit\\SyliusProductVariantAttributePlugin\\": ["tests/", "tests/Application/src"],
-            "Umanit\\SyliusProductVariantAttributePlugin\\spec\\": "spec/"
+            "Doop\\SyliusProductVariantAttributePlugin\\": "src/",
+            "Tests\\Doop\\SyliusProductVariantAttributePlugin\\": ["tests/", "tests/Application/src"],
+            "Doop\\SyliusProductVariantAttributePlugin\\spec\\": "spec/"
         }
     },
     "autoload-dev": {

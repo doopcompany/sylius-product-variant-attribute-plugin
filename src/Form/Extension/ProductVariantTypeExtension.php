@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Umanit\SyliusProductVariantAttributePlugin\Form\Extension;
+namespace Doop\SyliusProductVariantAttributePlugin\Form\Extension;
 
 use Sylius\Bundle\ProductBundle\Form\Type\ProductVariantType;
 use Sylius\Component\Resource\Factory\FactoryInterface;
@@ -10,8 +10,8 @@ use Sylius\Component\Resource\Translation\Provider\TranslationLocaleProviderInte
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Umanit\SyliusProductVariantAttributePlugin\Form\EventSubscriber\BuildAttributesFormSubscriber;
-use Umanit\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeValueType;
+use Doop\SyliusProductVariantAttributePlugin\Form\EventSubscriber\BuildAttributesFormSubscriber;
+use Doop\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeValueType;
 
 final class ProductVariantTypeExtension extends AbstractTypeExtension
 {
