@@ -12,7 +12,7 @@ Add attributes on your products variants.
 
 Install the plugin with composer
 
-`$ composer require doop/sylius-product-variant-attribute-plugin`
+`$ composer require doopcompany/sylius-product-variant-attribute-plugin`
 
 Register the plugin to your `config/bundles.php`
 
